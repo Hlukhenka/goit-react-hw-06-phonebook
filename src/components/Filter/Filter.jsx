@@ -6,7 +6,7 @@ const Filter = () => {
   const filterValue = useSelector(state => state.filterValue);
   const dispatch = useDispatch();
 
-  const onFielterChange = event => {
+  const onFilterChange = event => {
     dispatch(change(event.currentTarget.value));
   };
 
@@ -17,9 +17,9 @@ const Filter = () => {
         <input
           className={css.input}
           placeholder="Search"
-          onChange={onFielterChange}
+          onChange={onFilterChange}
           value={filterValue}
-        ></input>
+        />
       </label>
     </>
   );
